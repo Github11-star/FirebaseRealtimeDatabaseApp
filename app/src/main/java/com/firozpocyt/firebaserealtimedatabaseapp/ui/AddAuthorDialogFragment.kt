@@ -23,7 +23,7 @@ class AddAuthorDialogFragment : DialogFragment() {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        viewModel = ViewModelProviders.of(this).get(AuthorsViewModel::class.java)
+        viewModel = ViewModelProviders.of(this)[AuthorsViewModel::class.java]
         binding = DialogFragmentAddAuthorBinding.inflate(inflater, container,false)
         return binding!!.root
     }
